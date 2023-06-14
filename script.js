@@ -89,3 +89,16 @@ btnHold.addEventListener('click', function () {
 
 //New game functionality
 btnNew.addEventListener('click', initialization);
+
+// The following code exists so parcel doesn't delete the images because they arent beign used initially
+const hiddenImageMarkup = `
+<div class="hidden">
+<img src="./dice-1.png"/>
+<img src="./dice-2.png"/>
+<img src="./dice-3.png"/>
+<img src="./dice-4.png"/>
+<img src="./dice-5.png"/>
+<img src="./dice-6.png"/>
+</div>
+`
+btnHold.insertAdjacentHTML("afterend", hiddenImageMarkup)
